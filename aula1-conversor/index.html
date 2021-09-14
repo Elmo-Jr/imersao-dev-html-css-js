@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imersão Dev Alura - Aula 01</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container2">
+      <ul>
+        <a href="index.html"><li class="media atual">Média</li> </a>
+        <a href="moeda.html"><li class="moeda">Moeda</li></a>
+        <a href="temp.html"><li class="temp">Temperatura</li></a>
+        <a href="elmo.html"><li class="elmo">...</li></a>
+      </ul>
+      <section class="box media">
+        <h1>Calcule a Média</h1>
+
+        <article>
+          <div class="inputs">
+            <p>Notas</p>
+            <form action="">
+              <input
+                id="b1"
+                min="0"
+                max="10"
+                placeholder="1º Bimestre"
+                type="number"
+                value=""
+              />
+              <input
+                id="b2"
+                min="0"
+                max="10"
+                placeholder="2º Bimestre"
+                type="number"
+                value=""
+              />
+              <input
+                id="b3"
+                min="0"
+                max="10"
+                placeholder="3º Bimestre"
+                type="number"
+                value=""
+              />
+              <input
+                id="b4"
+                min="0"
+                max="10"
+                placeholder="4º Bimestre"
+                type="number"
+                value=""
+              />
+              <button type="button" onclick="media()">Calcular</button>
+            </form>
+          </div>
+          <div class="result">
+            <p id="p1"></p>
+            <p id="p2">
+              coloque sua nota dos 4 bimestres e veja se você foi aprovado
+            </p>
+          </div>
+        </article>
+      </section>
+    </div>
+    <footer class="container">
+      <img
+        src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg"
+        class="page-logo"
+        alt=""
+      />
+    </footer>
+    <a href="https://alura.com.br/" target="_blank">
+      <img
+        src="https://www.alura.com.br/assets/img/home/alura-logo.svg"
+        alt=""
+        class="alura-logo"
+      />
+    </a>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
