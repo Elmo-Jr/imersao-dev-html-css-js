@@ -153,6 +153,14 @@ li.atual {
   border-bottom: 0;
 }
 
+#p1 {
+  font-size: 30px;
+}
+
+.al {
+  margin-top: 15px;
+}
+
 .media {
   background-color: #fa9b35;
 }
@@ -165,8 +173,12 @@ li.atual {
   background-color: #b168ff;
 }
 
+.dist {
+  background-color: #ff6868;
+}
+
 .elmo {
-  background-color: #668c4a;
+  background-color: #ffe96b;
 }
 
 .social-container {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Imersão Dev Alura - Aula 01</title>
+    <title>Imersão Dev Alura - Aula 01/02</title>
 
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -14,26 +14,23 @@
         <a href="index.html"><li class="media">Média</li> </a>
         <a href="moeda.html"><li class="moeda">Moeda</li></a>
         <a href="temp.html"><li class="temp atual">Temperatura</li></a>
+        <a href="distancia.html"><li class="dist">Distância</li></a>
         <a href="elmo.html"><li class="elmo">...</li></a>
       </ul>
       <section class="box temp">
-        <h1>Celcius > Farenheit</h1>
+        <h1>Conversor de Temperatura</h1>
 
         <article>
           <div class="inputs">
             <p>ºC</p>
             <form action="">
-              <input
-                id="bt1"
-                min="0"
-                max="10"
-                placeholder="Celcius"
-                type="number"
-                value=""
-              />
+              <input id="bt1" placeholder="Celcius" type="number" value="" />
 
-              <button class="btn-moeda" type="button" onclick="temp()">
-                Converter
+              <button class="btn-moeda" type="button" onclick="CF()">
+                Converter ºC - ºF
+              </button>
+              <button class="btn-moeda" type="button" onclick="CK()">
+                Converter ºC - ºK
               </button>
             </form>
           </div>

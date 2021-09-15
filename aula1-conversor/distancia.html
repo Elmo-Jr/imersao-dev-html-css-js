@@ -12,46 +12,38 @@
     <div class="container2">
       <ul>
         <a href="index.html"><li class="media">Média</li> </a>
-        <a href="moeda.html"><li class="moeda atual">Moeda</li></a>
+        <a href="moeda.html"><li class="moeda">Moeda</li></a>
         <a href="temp.html"><li class="temp">Temperatura</li></a>
-        <a href="distancia.html"><li class="dist">Distância</li></a>
+        <a href="distancia.html"><li class="dist atual">Distância</li></a>
         <a href="elmo.html"><li class="elmo">...</li></a>
       </ul>
-      <section class="box moeda">
-        <h1>Conversor de Moedas</h1>
+      <section class="box dist">
+        <h1>Conversor de Kilometros e Anos luz</h1>
 
         <article>
           <div class="inputs">
-            <p>Valor</p>
+            <p>Km - Al</p>
             <form action="">
-              <input
-                id="bd1"
-                min="0"
-                placeholder="Valor"
-                type="number"
-                value=""
-              />
+              <input id="bt1" placeholder="Km" value="" />
 
-              <button class="btn-moeda" type="button" onclick="dolar()">
-                Converter $ - R$
+              <button class="btn-moeda" type="button" onclick="kmToAl()">
+                Converter
               </button>
+            </form>
+            <p class="al">Al - Km</p>
+            <form action="">
+              <input id="bt2" placeholder="Al" value="" />
 
-              <button class="btn-moeda" type="button" onclick="libra()">
-                Converter £ - R$
-              </button>
-
-              <button class="btn-moeda" type="button" onclick="wons()">
-                Converter ₩ - R$
-              </button>
-
-              <button class="btn-moeda" type="button" onclick="yenes()">
-                Converter ¥ - R$
+              <button class="btn-moeda" type="button" onclick="alToKm()">
+                Converter
               </button>
             </form>
           </div>
           <div class="result">
             <p id="p1"></p>
-            <p id="pd2">Digite o valor em Dolar e converta para o Real</p>
+            <p id="pt2">
+              Digite a distância em Kilometros e converta para Anos luz
+            </p>
           </div>
         </article>
       </section>
