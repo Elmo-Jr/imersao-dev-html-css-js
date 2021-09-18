@@ -1,0 +1,141 @@
+body {
+  font-family: "Roboto Mono", monospace;
+  min-height: 600px;
+  background-image: url("https://media4.giphy.com/media/3Q2hJ4FLN1UvS/giphy.gif?cid=790b7611fd19b3b8debd24a5c2cecb4a2bd231726a92331b&rid=giphy.gif&ct=g");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+}
+
+.main-box {
+  display: block;
+  height: 200px;
+  width: 300px;
+  margin-top: 30px;
+  margin-left: 50px;
+  text-align: center;
+  padding: 25px 25px 25px;
+  border: 4px solid #343c64;
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.result-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: cornflowerblue;
+  border: 4px solid #343c64;
+  border-radius: 10px;
+  width: 240px;
+  height: 155px;
+  padding: 15px;
+  margin-top: 30px;
+  margin-left: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.page-title {
+  font-size: 40px;
+  color: #ffffff;
+  margin: 0 0 10px;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.page-logo {
+  width: 200px;
+  height: 40px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.alura-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+@media (max-height: 500px) {
+  body {
+    min-height: 800px;
+  }
+}
+
+input {
+  width: 190px;
+  margin: 4px;
+  padding: 6px;
+  border: 2px solid #243485;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+button {
+  font-family: "Roboto Mono", monospace;
+  font-weight: bolder;
+  font-size: 16px;
+  width: 100px;
+  height: 25px;
+  margin-top: 12px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 5px;
+  background: #ffffff;
+  transition: transform cubic-bezier(0, -2.03, 1, 2.99) 100ms;
+}
+
+button:hover {
+  color: #ffffff;
+  background-color: rgb(37, 106, 245);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.resultado {
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.git {
+  margin-top: 30px;
+  margin-left: 15px;
+  height: 16px;
+  padding: 10px;
+  border: 2px solid #343c64;
+  border-radius: 7px;
+  text-decoration: none;
+  background-color: cornflowerblue;
+  font-size: medium;
+  font-weight: bolder;
+  color: #fff;
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 200ms;
+}
+
+.git:hover {
+  transform: scale(1.1);
+}
