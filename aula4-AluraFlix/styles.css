@@ -32,10 +32,11 @@ body {
   border-radius: 5px;
   justify-content: space-between;
   width: 90%;
-  margin: 20px auto 20px auto;
+  margin: 20px auto 00px auto;
 }
 
 .input-container {
+  margin-top: 30px;
   display: inline-block;
   width: 1200px;
   height: 40px;
@@ -50,11 +51,22 @@ input {
   box-sizing: border-box;
 }
 
+.input-container2 {
+  margin: 0 auto 10px auto;
+  display: inline-block;
+  width: 900px;
+}
+
+#nome {
+  width: 200px;
+}
+
 button,
 .git {
   background-color: rgb(48, 109, 241);
   color: #fff;
   text-shadow: rgba(0, 0, 0, 0.541) 1px 1px 1px;
+  font-family: inherit;
   font-size: 20px;
   font-weight: bold;
   border: none;
@@ -64,6 +76,7 @@ button,
   margin: 0;
   transition: transform cubic-bezier(0.175, 0.885, 0.32, 1.275) 200ms;
 }
+
 button:hover,
 .git:hover {
   background-color: rgb(97, 137, 221);
@@ -71,8 +84,16 @@ button:hover,
   cursor: pointer;
 }
 
+.btn-remove {
+  background-color: rgb(216, 22, 22);
+}
+
+.btn-remove:hover {
+  background-color: rgb(221, 94, 94);
+}
+
 section {
-  background-color: rgba(228, 228, 228, 0.171);
+  background-color: rgb(39, 39, 39);
   border-radius: 5px;
   /* height: 500px; */
   width: 100%;
@@ -91,14 +112,25 @@ p {
   font-weight: bolder;
 }
 
+#msg,
+#msgr {
+  display: inline-block;
+  background-color: brown;
+  border-radius: 5px;
+  line-height: 30px;
+  margin: 10px auto;
+  padding: 0 10px;
+}
+
 .page-subtitle {
   font-size: 30px;
   color: #f7f7f7;
   margin-top: 5px;
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 
 .main-footer {
+  margin-top: 15px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -124,9 +156,41 @@ p {
 body > img {
   margin: 0 10px;
 }
+.filmes {
+  margin-top: 60px;
+}
+
+#secfilmes {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.divfilmes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 200px;
+  margin-bottom: 10px;
+  padding: 10px;
+  transition: transform cubic-bezier(0.175, 0.885, 0.32, 1.275) 200ms;
+}
+
+.divfilmes:hover {
+  transform: scale(1.05);
+  background-color: #f7f7f73d;
+  border-radius: 5px;
+}
+
+.divfilmes p {
+  margin: 5px;
+  width: 150px;
+}
 
 img {
   max-height: 250px;
+  max-width: 200px;
 }
 
 .git {

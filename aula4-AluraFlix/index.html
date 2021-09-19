@@ -22,16 +22,23 @@
 
     <div class="container">
       <div class="input-container">
+        <input id="nome" placeholder="Titulo" type="text" />
         <input id="url" placeholder="URL da Imagem.jpg" type="text" />
         <button type="button" value="" onclick="adicionar()">Adicionar</button>
+        <p id="msg"></p>
       </div>
 
       <section class="filmes">
         <h2 class="page-subtitle">Filmes/Series</h2>
-        <p id="msg"></p>
         <div id="secfilmes"></div>
       </section>
     </div>
+
+      <div class="input-container2">
+        <input id="nomer" placeholder="Titulo" type="text" />
+        <button class="btn-remove" type="button" value="" onclick="remover()">Remover</button>
+        <p id="msgr"></p>
+      </div>
 
     <footer class="main-footer">
       <img
