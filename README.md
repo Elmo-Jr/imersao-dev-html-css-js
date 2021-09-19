@@ -4,4 +4,4 @@
 
 - Mentalista - https://elmo-jr.github.io/imersao-dev-html-css-js/aula2-Mentalista/index.html
 
-- AluraFliz - https://elmo-jr.github.io/imersao-dev-html-css-js/aula4-AluraFlix/index.html
+- AluraFlix - https://elmo-jr.github.io/imersao-dev-html-css-js/aula4-AluraFlix/index.html
