@@ -8,4 +8,4 @@
 
 - Tabela de classificação - https://elmo-jr.github.io/imersao-dev-html-css-js/aula6-Tabela/
 
-- Super Trunfo - https://elmo-jr.github.io/imersao-dev-html-css-js/aula7-Super Trunfo/
+- Super Trunfo - https://elmo-jr.github.io/imersao-dev-html-css-js/aula7-Super-Trunfo/
