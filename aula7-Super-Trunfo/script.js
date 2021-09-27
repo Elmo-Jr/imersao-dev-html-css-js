@@ -1,6 +1,6 @@
 var carta1 = {
     nome: "perola",
-    img: "https://pm1.narvii.com/6489/15a896381bed20018304d7b544b729730d1523e8_hq.jpg",
+    img: "https://i.gifer.com/6vOr.gif",
     atributos: {
         ataque: 1900,
         defesa: 700,
@@ -10,7 +10,7 @@ var carta1 = {
 
 var carta2 = {
     nome: "ametista",
-    img: "https://pm1.narvii.com/6489/83a39098b78319eb7c876bcb2cecbf248dfade5c_hq.jpg",
+    img: "https://thumbs.gfycat.com/WarmAcademicCuckoo-size_restricted.gif",
     atributos: {
         ataque: 1800,
         defesa: 1000,
@@ -20,7 +20,7 @@ var carta2 = {
 
 var carta3 = {
     nome: "garnet",
-    img: "https://pm1.narvii.com/6489/20025e454d9e0d86aa626af225121009fd6ffd70_hq.jpg",
+    img: "http://pa1.narvii.com/6149/c5f1d2e006803c4cfe254edda0c22721e3e918af_00.gif",
     atributos: {
         ataque: 2000,
         defesa: 2000,
@@ -30,7 +30,7 @@ var carta3 = {
 
 var carta4 = {
     nome: "steven",
-    img: "https://pm1.narvii.com/6489/87cd2214bdc2d3905711c944976a938ea147714b_hq.jpg",
+    img: "https://thumbs.gfycat.com/DistantSolidIggypops-max-1mb.gif",
     atributos: {
         ataque: 1000,
         defesa: 2000,
@@ -61,23 +61,7 @@ function sortearCarta() {
     document.getElementById("btnSortear").disabled = true
     document.getElementById("btnJogar").disabled = false
     
-    exibirOpcoes()
-}
-
-function exibirOpcoes() {
-var imgPlayer = document.getElementById("imgPlayer")
-    var opcoes = document.getElementById("opcoes")
-    var opcoesTexto = ""
-
-    imgPlayer.innerHTML = "<img src='"+ cartaPlayer.img +"'>";
-
-
-    for (var atributo in cartaPlayer.atributos) {
-        opcoesTexto += "<input type='radio' name='atributo' value='"+ atributo +"'>" + atributo
-
-    }
-
-     opcoes.innerHTML = opcoesTexto
+    exibirCartaJogador()
 }
 
 function obtemAtributos() {
@@ -95,24 +79,76 @@ function obtemAtributos() {
 
 function jogar() {
     var atributoSelecionado = obtemAtributos()
+    var divResultado = document.getElementById("resultado")
+
     var valorCartaPlayer = cartaPlayer.atributos[atributoSelecionado]
     var valorCartaMaquina = cartaMaquina.atributos[atributoSelecionado]
-    var elementoResultado = document.getElementById("resultado")
 
 if (selecionado == true){
     if (valorCartaPlayer > valorCartaMaquina) {
-        elementoResultado.innerHTML= "Você VENCEU!!!!!"
+        htmlDivResultado = "<p class='resultado-final' >Você VENCEU!!!</p>"
+        document.getElementById("btnJogar").disabled = true
+        exibirCartaMaquina()
+
     } else if (valorCartaPlayer < valorCartaMaquina) {
-        elementoResultado.innerHTML = "Você PERDEU ;-;"
+        htmlDivResultado = "<p class='resultado-final' >Você PERDEU ;-;</p>"
+        document.getElementById("btnJogar").disabled = true
+        exibirCartaMaquina()
+    
     } else {
-        elementoResultado.innerHTML = "ENPATE"
+        htmlDivResultado = "<p class='resultado-final' >EMPATOU</p>"
+        document.getElementById("btnJogar").disabled = true
+        exibirCartaMaquina()
+    
     }
 } else {
-    elementoResultado.innerHTML = "Selecione um atributo"
+    htmlDivResultado = "<p class='resultado-final' >Selecione um atributo</p>"
+}
+
+divResultado.innerHTML = htmlDivResultado
 }
 
 
+function exibirCartaJogador() {
+    var divCartaPlayer = document.getElementById("carta-jogador")
+    divCartaPlayer.style.backgroundImage = `url(${cartaPlayer.img})`
 
-console.log(cartaMaquina)
+    var moldura =
+        '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent.png" style=" width: inherit; height: inherit; position: absolute;">';
+    
+    var nome = `<p class="carta-subtitle" >${cartaPlayer.nome}</p>`
+    
+    var tagHTML = `<div id='opcoes' class='carta-status' >`
 
+    var opcoesTexto = ""
+        
+    for (var atributo in cartaPlayer.atributos) {
+        opcoesTexto += "<input type='radio' name='atributo' value='"+ atributo +"'>" + atributo + " " + cartaPlayer.atributos[atributo] + "<br>"
+    }
+
+    divCartaPlayer.innerHTML = moldura + nome + tagHTML + opcoesTexto + "</div>"
+    
 }
+
+
+function exibirCartaMaquina() {
+    var divCartaMaquina = document.getElementById("carta-maquina")
+    divCartaMaquina.style.backgroundImage = `url(${cartaMaquina.img})`
+
+    var moldura =
+        '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent.png" style=" width: inherit; height: inherit; position: absolute;">';
+    
+    var nome = `<p class="carta-subtitle" >${cartaMaquina.nome}</p>`
+    
+    var tagHTML = `<div id='opcoes' class='carta-status' >`
+
+    var opcoesTexto = ""
+        
+    for (var atributo in cartaMaquina.atributos) {
+        opcoesTexto += "<p type='text' name='atributo' value='"+ atributo +"'>" + atributo + " " + cartaMaquina.atributos[atributo] + "</p>"
+    }
+
+    divCartaMaquina.innerHTML = moldura + nome + tagHTML + opcoesTexto + "</div>"
+    
+}
+
