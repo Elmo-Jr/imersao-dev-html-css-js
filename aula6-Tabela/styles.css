@@ -1,6 +1,7 @@
 * {
   text-align: center;
   margin: 0;
+  scrollbar-width: thin !important;
 }
 
 body {
@@ -23,7 +24,7 @@ body {
   border-radius: 10px;
   text-align: center;
   width: 50%;
-  margin: 50px auto;
+  margin: 20px auto 50px auto;
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.568) 5px 5px 0px;
 }
@@ -71,9 +72,15 @@ td {
   border-right: 0;
   color: #000;
 }
+tr {
+  height: 30px;
+}
+
+.div-addplayer {
+  margin-top: 20px;
+}
 
 .inpt {
-  margin-bottom: 40px;
   background-color: #ffffff;
   border: 2px solid rgb(27, 27, 27);
   border-radius: 5px;
@@ -85,6 +92,9 @@ td {
 }
 
 .btn {
+  width: 80px;
+
+  font-weight: 500;
   font-family: "Patrick Hand", cursive;
   border: 2px solid rgb(27, 27, 27);
   border-radius: 5px;
@@ -101,17 +111,21 @@ td {
   transform: scale(1.1);
 }
 
-.btn-sucsses {
-  border: 2px solid dodgerblue;
-  color: dodgerblue;
+.a-sucsses {
+  cursor: pointer;
+  text-decoration: none;
+  height: 20px;
+  border: none;
+  color: forestgreen;
   transition: transform cubic-bezier(0.175, 0.885, 0.32, 1.275) 100ms;
 }
 
-.btn-sucsses:hover {
+.a-sucsses:hover {
+  text-decoration: forestgreen wavy underline;
   cursor: pointer;
-  border: 2px solid dodgerblue;
-  background-color: dodgerblue;
-  color: #ffffff;
+  border: none;
+  background-color: rgba(30, 143, 255, 0);
+  color: forestgreen;
   transform: scale(1.1);
 }
 
@@ -127,4 +141,25 @@ td {
   background-color: red;
   color: #ffffff;
   transform: scale(1.1);
+}
+
+.btn-empate {
+  border: 2px solid dodgerblue;
+  color: dodgerblue;
+}
+.btn-empate:hover {
+  cursor: pointer;
+  border: 2px solid dodgerblue;
+  background-color: dodgerblue;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.div-acoes {
+  margin-bottom: 20px;
+}
+
+.btn-git {
+  margin-bottom: 50px;
+  width: 80px;
 }

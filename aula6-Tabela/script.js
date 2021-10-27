@@ -38,13 +38,9 @@ function exibeJogadoresNaTela(listaJogadores) {
     elemento += "<td>" + listaJogadores[i].derrotas + "</td>";
     elemento += "<td>" + listaJogadores[i].pontos + "</td>";
     elemento +=
-      "<td><button class='btn btn-sucsses' onclick='adicionarVitoria(" +
+      "<td><a onclick='adicionarVitoria(" +
       i +
-      ")'>Vitória</button></td>";
-    elemento +=
-      "<td><button class='btn' onclick='adicionarEmpate(" +
-      i +
-      ")'>Empate</button></td>";
+      ")'class='a-sucsses'>Vitoria</a></td>";
     elemento += "</tr>";
   }
 

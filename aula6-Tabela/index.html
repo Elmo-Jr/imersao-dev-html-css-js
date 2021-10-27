@@ -11,21 +11,27 @@
       rel="stylesheet"
     />
 
-    <title>Imersão Dev - Aula 06</title>
+    <title>Tabela de classificação</title>
 
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="main-header">
       <h1>Tabela de classificação</h1>
-      <a href="https://alura.com.br/" target="_blank">
-        <img
-          src="https://www.alura.com.br/assets/img/home/alura-logo.svg"
-          alt=""
-          class="alura-logo"
-        />
-      </a>
     </header>
+    <div class="div-addplayer">
+      <form onsubmit="return false">
+        <p>Adicionar Player</p>
+        <input
+          id="nome"
+          class="inpt"
+          name="player"
+          placeholder="Nome do Player"
+          type="text"
+        />
+        <button onclick="novojogador()" class="btn btn-inpt">Adicionar</button>
+      </form>
+    </div>
     <div class="container">
       <table style="width: 100%">
         <thead>
@@ -42,18 +48,23 @@
       </table>
     </div>
 
-    <p>Adicionar Player</p>
-    <input
-      id="nome"
-      class="inpt"
-      name="player"
-      placeholder="Nome do Player"
-      type="text"
-    />
-    <button onclick="novojogador()" class="btn btn-inpt">Adicionar</button>
+    <div class="div-acoes">
+      <p>Ações</p>
+      <button onclick="adicionarEmpate()" class="btn btn-inpt btn-empate">
+        Empate
+      </button>
+      <button onclick="zerar()" class="btn btn-inpt btn-remove">Zerar</button>
+      <button onclick="window.location.reload();" class="btn btn-inpt">
+        Reset
+      </button>
+    </div>
+    <button
+      onclick="window.open('https://github.com/oElmoJr','_blank')"
+      class="btn btn-inpt btn-git"
+    >
+      GitHub
+    </button>
 
-    <p>Zerar os pontos</p>
-    <button onclick="zerar()" class="btn btn-inpt btn-remove">Zerar</button>
     <script src="script.js"></script>
   </body>
 </html>
